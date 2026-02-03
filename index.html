@@ -1,855 +1,764 @@
-<!doctype html>
-<html lang="fr" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>King Rahman Moctarr Basiru — Portfolio (2 profils)</title>
-    <meta
-      name="description"
-      content="Portfolio de King Rahman Moctarr Basiru — 2 profils : Développeur Web PHP (Symfony/Laravel) et Chef de Projet IA/Data. Une page HTML TailwindCSS orientée recrutement."
-    />
+<!DOCTYPE html>
+<html lang="fr">
 
-    <!-- TailwindCSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                DEFAULT: "#1D4ED8", // blue-700
-                50: "#EFF6FF",
-                100: "#DBEAFE",
-                800: "#1E40AF",
-              },
-              accent: {
-                DEFAULT: "#0F766E", // teal-700
-                50: "#F0FDFA",
-              },
-              neutralink: {
-                950: "#0B1220",
-              },
-            },
-            boxShadow: {
-              soft: "0 10px 30px rgba(2, 6, 23, 0.08)",
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      :focus-visible {
-        outline: 3px solid rgba(29, 78, 216, 0.55);
-        outline-offset: 2px;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Rahman Moctarr Basiru - Portfolio</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7C3AED',
+            accent: '#A855F7',
+            dark: '#1F2937',
+            light: '#F3F4F6'
+          }
+        }
       }
-    </style>
-  </head>
+    }
+  </script>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
 
-  <body class="bg-slate-50 text-slate-900 antialiased">
-    <!-- Skip link -->
-    <a
-      href="#main"
-      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-slate-900 focus:shadow-soft"
-      aria-label="Aller au contenu principal"
-      >Aller au contenu principal</a
-    >
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-    <!-- Sticky header -->
-    <header class="sticky top-0 z-40 border-b border-slate-200/70 bg-slate-50/80 backdrop-blur">
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <a href="#top" class="group inline-flex items-center gap-3" aria-label="Retour en haut de page">
-          <span
-            class="grid h-10 w-10 place-items-center rounded-xl bg-primary-50 text-primary shadow-sm ring-1 ring-slate-200"
-            aria-hidden="true"
-          >
-            <span class="text-sm font-semibold tracking-tight">KR</span>
-          </span>
-          <div class="leading-tight">
-            <p class="text-sm font-semibold text-slate-900">King Rahman Moctarr Basiru</p>
-            <p id="activeRoleLabel" class="text-xs text-slate-600">Profil actif : Développeur Web PHP</p>
-          </div>
-        </a>
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
 
-        <nav class="hidden items-center gap-2 md:flex" aria-label="Navigation principale">
-          <a
-            href="#about"
-            class="rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-white hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-primary/40"
-            >À propos</a
-          >
-          <a
-            href="#skills"
-            class="rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-white hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-primary/40"
-            >Compétences</a
-          >
-          <a
-            href="#experience"
-            class="rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-white hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-primary/40"
-            >Expériences</a
-          >
-          <a
-            href="#projects"
-            class="rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-white hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-primary/40"
-            >Projets</a
-          >
-          <a
-            href="#education"
-            class="rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-white hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-primary/40"
-            >Formation</a
-          >
-          <a
-            href="#contact"
-            class="ml-1 inline-flex items-center gap-2 rounded-lg bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:ring-2 focus-visible:ring-primary/40"
-            >Contact</a
-          >
-        </nav>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
 
-        <!-- Mobile menu button -->
-        <button
-          id="menuBtn"
-          class="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50 md:hidden"
-          aria-label="Ouvrir le menu"
-          aria-expanded="false"
-          aria-controls="mobileMenu"
-        >
-          Menu
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#home" class="text-2xl font-bold text-dark">KRM<span class="text-primary">.</span></a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-gray-600 hover:text-primary transition">Accueil</a>
+          <a href="#about" class="text-gray-600 hover:text-primary transition">À propos</a>
+          <a href="#experience" class="text-gray-600 hover:text-primary transition">Expérience</a>
+          <a href="#skills" class="text-gray-600 hover:text-primary transition">Compétences</a>
+          <a href="#projects" class="text-gray-600 hover:text-primary transition">Projets</a>
+          <a href="#contact" class="text-gray-600 hover:text-primary transition">Contact</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
         </button>
       </div>
+    </div>
+  </nav>
 
-      <!-- Mobile nav -->
-      <div id="mobileMenu" class="hidden border-t border-slate-200/70 bg-slate-50 md:hidden">
-        <nav class="mx-auto max-w-6xl px-4 py-3 sm:px-6" aria-label="Navigation mobile">
-          <div class="grid gap-2">
-            <a href="#about" class="rounded-lg bg-white px-3 py-2 text-sm text-slate-800 shadow-sm">À propos</a>
-            <a href="#skills" class="rounded-lg bg-white px-3 py-2 text-sm text-slate-800 shadow-sm">Compétences</a>
-            <a href="#experience" class="rounded-lg bg-white px-3 py-2 text-sm text-slate-800 shadow-sm">Expériences</a>
-            <a href="#projects" class="rounded-lg bg-white px-3 py-2 text-sm text-slate-800 shadow-sm">Projets</a>
-            <a href="#education" class="rounded-lg bg-white px-3 py-2 text-sm text-slate-800 shadow-sm">Formation</a>
-            <a href="#contact" class="rounded-lg bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm">Contact</a>
-          </div>
-        </nav>
-      </div>
-    </header>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+    <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+      <a href="#home" class="text-gray-600 hover:text-primary transition">Accueil</a>
+      <a href="#about" class="text-gray-600 hover:text-primary transition">À propos</a>
+      <a href="#experience" class="text-gray-600 hover:text-primary transition">Expérience</a>
+      <a href="#skills" class="text-gray-600 hover:text-primary transition">Compétences</a>
+      <a href="#projects" class="text-gray-600 hover:text-primary transition">Projets</a>
+      <a href="#contact" class="text-gray-600 hover:text-primary transition">Contact</a>
+    </div>
+  </div>
 
-    <main id="main" class="mx-auto max-w-6xl px-4 sm:px-6">
-      <!-- Hero -->
-      <section id="top" class="py-10 sm:py-14">
-        <div class="grid gap-8 lg:grid-cols-12 lg:items-start">
-          <div class="lg:col-span-7">
-            <div class="flex flex-wrap items-center gap-2">
-              <span
-                class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-700 shadow-sm"
-              >
-                <span class="inline-block h-2 w-2 rounded-full bg-accent" aria-hidden="true"></span>
-                <span id="heroRhythm">Rythme : 3 semaines entreprise / 1 semaine école</span>
-              </span>
-
-              <span
-                class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-700 shadow-sm"
-              >
-                <span class="inline-block h-2 w-2 rounded-full bg-primary" aria-hidden="true"></span>
-                <span id="heroAvailability">Disponibilité : dès que possible</span>
-              </span>
-            </div>
-
-            <h1 class="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              <span id="heroTitle">Alternance — Développeur Web PHP</span>
-              <span class="block text-base font-semibold text-slate-600 sm:mt-2" id="heroSubtitle"
-                >(Symfony / Laravel)</span
-              >
-            </h1>
-              <p class="mt-4 max-w-2xl text-slate-700 hidden" id="heroSummary">
-                Développeur web orienté applications métier, je code en PHP depuis 2019 (POO, MVC). Expérience concrète sur
-                Laravel en PME (développement, maintenance, correction d’anomalies, support) et montée en compétences sur
-                Symfony (API REST, Doctrine, sécurité). Je recherche une alternance pour contribuer à la conception, au
-                développement, à la mise en production via Git et à l’amélioration continue (performances, qualité, correction de bugs).
-              </p>
-
-            <div class="mt-6 flex flex-wrap items-center gap-3">
-              <a
-                href="#profile-switch"
-                class="inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:ring-2 focus-visible:ring-primary/40"
-              >
-                Choisir un profil
-              </a>
-              <a
-                href="#projects"
-                class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-primary/40"
-              >
-                Voir les projets
-              </a>
-              <a
-                href="mailto:kingrahman98@hotmail.com"
-                class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-primary/40"
-              >
-                Me contacter
-              </a>
-            </div>
-
-            <dl class="mt-6 grid gap-3 sm:grid-cols-2">
-              <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Mobilité</dt>
-                <dd class="mt-1 text-sm font-medium text-slate-900" id="heroMobility">Toute la France</dd>
-              </div>
-              <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Langues</dt>
-                <dd class="mt-1 text-sm font-medium text-slate-900">Français (C2), Anglais (B2)</dd>
-              </div>
-            </dl>
-          </div>
-
-          <aside class="lg:col-span-5">
-            <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-              <div class="flex items-center gap-4">
-                <div
-                  class="grid h-16 w-16 place-items-center rounded-2xl bg-primary-50 text-primary ring-1 ring-slate-200"
-                  aria-label="Avatar (initiales)"
-                  role="img"
-                >
-                  <span class="text-lg font-bold">KR</span>
-                </div>
-                <div>
-                  <p class="text-sm font-semibold text-slate-900">Coordonnées</p>
-                  <p class="mt-1 text-sm text-slate-700">
-                    <span class="font-medium">Tél.</span>
-                    <a class="underline decoration-slate-300 hover:decoration-slate-500" href="tel:+33618901402"
-                      >06 18 90 14 02</a
-                    >
-                  </p>
-                  <p class="text-sm text-slate-700">
-                    <span class="font-medium">Email.</span>
-                    <a class="underline decoration-slate-300 hover:decoration-slate-500" href="mailto:kingrahman98@hotmail.com"
-                      >kingrahman98@hotmail.com</a
-                    >
-                  </p>
-                </div>
-              </div>
-
-              <!-- Profile switch -->
-              <div id="profile-switch" class="mt-6 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
-                <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Profil à afficher</p>
-                <p class="mt-2 text-sm text-slate-700">
-                  Cette page regroupe 2 CV. Choisissez le profil adapté à l’offre, la page s’ajuste automatiquement.
-                </p>
-
-                <div class="mt-4 grid gap-2 sm:grid-cols-2">
-                  <button
-                    id="btnDev"
-                    class="rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:ring-2 focus-visible:ring-primary/40"
-                    aria-label="Afficher le profil Développeur Web PHP"
-                  >
-                    Développeur PHP
-                  </button>
-                  <button
-                    id="btnAI"
-                    class="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-primary/40"
-                    aria-label="Afficher le profil Chef de Projet IA / Data"
-                  >
-                    Chef de Projet IA/Data
-                  </button>
-                </div>
-              </div>
-
-              <!-- Quick highlights (dynamic) -->
-              <div class="mt-6">
-                <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Points forts</p>
-                <ul id="highlights" class="mt-3 space-y-2 text-sm text-slate-700">
-                  <!-- injected -->
-                </ul>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- About -->
-      <section id="about" class="py-10">
-        <div class="flex items-end justify-between gap-4">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">À propos</h2>
-          <span class="hidden h-px flex-1 bg-slate-200 sm:block" aria-hidden="true"></span>
-        </div>
-
-        <article class="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p id="aboutText" class="text-slate-700">
-            <!-- injected -->
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-purple-50">
+    <div class="container mx-auto px-6 py-20">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div class="flex-1 fade-in">
+          <p class="text-primary font-semibold mb-2">Bonjour, je suis 👋</p>
+          <h1 class="text-5xl lg:text-7xl font-bold text-dark mb-4">
+            King Rahman<br />
+            <span class="text-primary">Moctarr Basiru</span>
+          </h1>
+          <h2 class="text-2xl lg:text-3xl text-gray-600 mb-6">
+            Développeur Full Stack & Tech Lead
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 max-w-2xl">
+            Passionné par le développement web et les technologies modernes, je crée des solutions
+            innovantes avec Symfony, Laravel et React. Actuellement en recherche d'alternance Développeur
+            Full Stack ou Chef de Projet Web.
           </p>
-
-          <div class="mt-6 grid gap-4 sm:grid-cols-2">
-            <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
-              <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Soft skills</p>
-              <div id="softSkills" class="mt-3 flex flex-wrap gap-2">
-                <!-- injected -->
-              </div>
-            </div>
-
-            <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
-              <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Certifications</p>
-              <ul class="mt-2 space-y-1 text-sm text-slate-700">
-                <li>
-                  <a
-                    class="underline decoration-slate-300 hover:decoration-slate-500"
-                    href="https://document-factory.datascientest.com/verify/76982563-6c55-496b-904b-f1d2cb959594"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Python for Data Science</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="underline decoration-slate-300 hover:decoration-slate-500"
-                    href="https://document-factory.datascientest.com/verify/7fb49bbb-5628-4de0-9ff2-cc3d8a4836cc"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Machine Learning</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="underline decoration-slate-300 hover:decoration-slate-500"
-                    href="https://www.freecodecamp.org/certification/fcce95386f1-7e12-4994-a209-c6a82ed58525/foundational-c-sharp-with-microsoft"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Microsoft Foundational C#</a
-                  >
-                </li>
-              </ul>
-            </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact"
+              class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-purple-700 transition font-semibold">
+              Me contacter
+            </a>
+            <a href="#projects"
+              class="px-8 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition font-semibold">
+              Voir mes projets
+            </a>
           </div>
-        </article>
-      </section>
-
-      <!-- Skills -->
-      <section id="skills" class="py-10">
-        <div class="flex items-end justify-between gap-4">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Compétences</h2>
-          <span class="hidden h-px flex-1 bg-slate-200 sm:block" aria-hidden="true"></span>
-        </div>
-
-        <div id="skillsGrid" class="mt-6 grid gap-4 lg:grid-cols-3">
-          <!-- injected -->
-        </div>
-      </section>
-
-      <!-- Experience -->
-      <section id="experience" class="py-10">
-        <div class="flex items-end justify-between gap-4">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Expériences</h2>
-          <span class="hidden h-px flex-1 bg-slate-200 sm:block" aria-hidden="true"></span>
-        </div>
-
-        <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div class="relative pl-6">
-            <div class="absolute left-2 top-2 h-[calc(100%-8px)] w-px bg-slate-200" aria-hidden="true"></div>
-
-            <article class="relative pb-8">
-              <div
-                class="absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full bg-primary ring-4 ring-primary-50 hidden"
-                aria-hidden="true"
-              ></div>
-              <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <h3 class="text-base font-semibold text-slate-900" id="exp1Title">
-                  Responsable Informatique / Développeur Full Stack
-                </h3>
-                <p class="text-sm text-slate-600">Janv. 2023 – Déc. 2023</p>
-              </header>
-              <p class="mt-1 text-sm text-slate-700">Studio Photo Lucas (PME) — Douala</p>
-              <ul id="exp1Bullets" class="mt-4 space-y-2 text-sm text-slate-700">
-                <!-- injected -->
-              </ul>
-            </article>
-
-            <article class="relative">
-              <div
-                class="absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full bg-primary ring-4 ring-primary-50 hidden"
-                aria-hidden="true"
-              ></div>
-              <header class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <h3 class="text-base font-semibold text-slate-900">Stagiaire Développeur Web</h3>
-                <p class="text-sm text-slate-600">Juil. 2020 – Nov. 2020</p>
-              </header>
-              <p class="mt-1 text-sm text-slate-700">OuiCare — Douala</p>
-              <ul id="exp2Bullets" class="mt-4 space-y-2 text-sm text-slate-700">
-                <!-- injected -->
-              </ul>
-            </article>
+          <div class="flex gap-4 mt-8">
+            <a href="https://linkedin.com/in/moctarr" target="_blank"
+              class="text-gray-600 hover:text-primary transition" aria-label="LinkedIn">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="https://github.com/diiblo" target="_blank" class="text-gray-600 hover:text-primary transition"
+              aria-label="GitHub">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
           </div>
         </div>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" class="py-10">
-        <div class="flex items-end justify-between gap-4">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Projets</h2>
-          <span class="hidden h-px flex-1 bg-slate-200 sm:block" aria-hidden="true"></span>
-        </div>
-
-        <div id="projectsGrid" class="mt-6 grid gap-4 lg:grid-cols-2">
-          <!-- injected -->
-        </div>
-      </section>
-
-      <!-- Education -->
-      <section id="education" class="py-10">
-        <div class="flex items-end justify-between gap-4">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Formation</h2>
-          <span class="hidden h-px flex-1 bg-slate-200 sm:block" aria-hidden="true"></span>
-        </div>
-
-        <div class="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div class="grid gap-4">
-            <article class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
-              <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <h3 class="text-base font-semibold text-slate-900">Mastère Tech Lead Full Stack (en cours)</h3>
-                <p class="text-sm text-slate-600">Depuis janv. 2026</p>
-              </div>
-              <p class="mt-1 text-sm text-slate-700">L’école .decode, Paris</p>
-              <p id="edu1Focus" class="mt-3 text-sm text-slate-700">
-                <!-- injected -->
-              </p>
-            </article>
-
-            <article class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
-              <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <h3 class="text-base font-semibold text-slate-900">Mastère 1 Data Engineering</h3>
-                <p class="text-sm text-slate-600">Sept. 2024 – Avr. 2025</p>
-              </div>
-              <p class="mt-1 text-sm text-slate-700">ECE, Paris</p>
-              <p id="edu2Focus" class="mt-3 text-sm text-slate-700">
-                <!-- injected -->
-              </p>
-            </article>
-
-            <article class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
-              <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                <h3 class="text-base font-semibold text-slate-900">Licence Génie Logiciel</h3>
-                <p class="text-sm text-slate-600">2019 – 2022</p>
-              </div>
-              <p class="mt-1 text-sm text-slate-700">Institut Universitaire de l'Estuaire, Douala</p>
-              <p class="mt-3 text-sm text-slate-700">
-                Focus : algorithmique, PHP, C#, SQL, conception, UML, gestion de projet.
-              </p>
-            </article>
+        <div class="shrink-0 fade-in">
+          <div class="relative">
+            <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary to-purple-600 p-2">
+              <img
+                class="w-full h-full rounded-full bg-white flex items-center justify-center text-6xl font-bold text-primary"
+                src="moi1.png" alt="">
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-lg p-4 border-4 border-purple-100">
+              <p class="text-sm font-semibold text-gray-700">Disponible en alternance</p>
+              <p class="text-xs text-gray-500">3 sem. / 1 sem.</p>
+            </div>
           </div>
         </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="py-10 pb-16">
-        <div class="flex items-end justify-between gap-4">
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900">Contact</h2>
-          <span class="hidden h-px flex-1 bg-slate-200 sm:block" aria-hidden="true"></span>
-        </div>
-
-        <div class="mt-6 grid gap-4 lg:grid-cols-12">
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-7">
-            <h3 class="text-base font-semibold text-slate-900">Me joindre</h3>
-            <p class="mt-2 text-sm text-slate-700">
-              Email et téléphone fournis dans le CV. Liens pro : LinkedIn et GitHub.
-            </p>
-
-            <div class="mt-6 grid gap-3 sm:grid-cols-2">
-              <a
-                href="mailto:kingrahman98@hotmail.com"
-                class="group rounded-2xl border border-slate-200 bg-slate-50 p-4 hover:bg-white"
-              >
-                <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Email</p>
-                <p
-                  class="mt-1 text-sm font-semibold text-slate-900 underline decoration-slate-300 group-hover:decoration-slate-500"
-                >
-                  kingrahman98@hotmail.com
-                </p>
-              </a>
-
-              <a
-                href="tel:+33618901402"
-                class="group rounded-2xl border border-slate-200 bg-slate-50 p-4 hover:bg-white"
-              >
-                <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Téléphone</p>
-                <p
-                  class="mt-1 text-sm font-semibold text-slate-900 underline decoration-slate-300 group-hover:decoration-slate-500"
-                >
-                  06 18 90 14 02
-                </p>
-              </a>
-            </div>
-
-            <div class="mt-4 grid gap-3 sm:grid-cols-2">
-              <a
-                href="http://www.linkedin.com/in/moctarr"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group rounded-2xl border border-slate-200 bg-slate-50 p-4 hover:bg-white"
-              >
-                <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">LinkedIn</p>
-                <p
-                  class="mt-1 text-sm font-semibold text-slate-900 underline decoration-slate-300 group-hover:decoration-slate-500"
-                >
-                  linkedin.com/in/moctarr
-                </p>
-              </a>
-
-              <a
-                href="https://github.com/diiblo"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group rounded-2xl border border-slate-200 bg-slate-50 p-4 hover:bg-white"
-              >
-                <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">GitHub</p>
-                <p
-                  class="mt-1 text-sm font-semibold text-slate-900 underline decoration-slate-300 group-hover:decoration-slate-500"
-                >
-                  github.com/diiblo
-                </p>
-              </a>
-            </div>
-
-            <div class="mt-6 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200 hidden">
-              <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">À compléter (optionnel)</p>
-              <p class="mt-2 text-sm text-slate-700">
-                Portfolio / site perso : <span class="font-medium">[À compléter]</span>
-              </p>
-            </div>
-          </article>
-
-          <aside class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-5">
-            <h3 class="text-base font-semibold text-slate-900">Raccourcis</h3>
-            <p class="mt-2 text-sm text-slate-700">
-              Besoin d’une version dédiée à une offre ? Utilisez le switch “profil” pour afficher la version la plus pertinente.
-            </p>
-
-            <div class="mt-6 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
-              <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Info recrutement</p>
-              <ul class="mt-2 space-y-2 text-sm text-slate-700">
-                <li><span class="font-semibold">Rythme :</span> 3 semaines entreprise / 1 semaine école</li>
-                <li><span class="font-semibold">Disponibilité :</span> dès que possible</li>
-                <li><span class="font-semibold">Durée :</span> <span id="durationNote">1 à 2 ans</span></li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </section>
-    </main>
-
-    <footer class="border-t border-slate-200 bg-white">
-      <div
-        class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-slate-600 sm:px-6 sm:flex-row sm:items-center sm:justify-between"
-      >
-        <p>© <span id="year"></span> King Rahman Moctarr Basiru. Tous droits réservés.</p>
-        <p class="text-slate-500 hidden">Une page HTML + TailwindCSS (CDN). Sans images externes.</p>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script>
-      // Shared helpers
-      const bullet = (text) => `
-        <li class="flex gap-2">
-          <span class="mt-1 inline-block h-2 w-2 flex-none rounded-full bg-accent" aria-hidden="true"></span>
-          <span>${text}</span>
-        </li>
-      `;
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Mon parcours<span class="text-primary">.</span></h2>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        Développeur Full Stack avec 4+ années d'expérience en développement web et data engineering
+      </p>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div
+          class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+          <div class="text-primary text-4xl mb-4">💻</div>
+          <h3 class="text-xl font-bold mb-3">Développement Web</h3>
+          <p class="text-gray-600">Expert en PHP (Laravel, Symfony), JavaScript, React et Next.js. Expérience
+            en architecture MVC et API REST.</p>
+        </div>
+        <div
+          class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+          <div class="text-primary text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-3">Data & IA</h3>
+          <p class="text-gray-600">Compétences en Python, SQL, Machine Learning et Data Engineering.
+            Certification Python for Data Science et ML.</p>
+        </div>
+        <div
+          class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+          <div class="text-primary text-4xl mb-4">🚀</div>
+          <h3 class="text-xl font-bold mb-3">Gestion de Projet</h3>
+          <p class="text-gray-600">Expérience en coordination d'équipe, pilotage de projets web et
+            méthodologies agiles (Scrum).</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      const tag = (text, variant = "neutral") => {
-        const cls =
-          variant === "primary"
-            ? "bg-primary-50 text-primary"
-            : variant === "accent"
-            ? "bg-accent-50 text-slate-800"
-            : "bg-slate-50 text-slate-700";
-        return `<span class="rounded-full ${cls} px-3 py-1 text-sm ring-1 ring-slate-200">${text}</span>`;
-      };
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Expérience<span class="text-primary">.</span></h2>
+      <p class="text-center text-gray-600 mb-12">Mon parcours professionnel</p>
 
-      const skillCard = (title, subtitle, tagsHtml) => `
-        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h3 class="text-base font-semibold text-slate-900">${title}</h3>
-          <p class="mt-2 text-sm text-slate-600">${subtitle}</p>
-          <div class="mt-4 flex flex-wrap gap-2">${tagsHtml}</div>
-        </article>
-      `;
-
-      const projectCard = (title, meta, linkHref, linkLabel, bulletsHtml, tagsHtml) => `
-        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <header class="flex items-start justify-between gap-4">
-            <div>
-              <h3 class="text-base font-semibold text-slate-900">${title}</h3>
-              <p class="mt-1 text-sm text-slate-600">${meta}</p>
+      <div class="max-w-4xl mx-auto">
+        <!-- Experience Item -->
+        <div class="relative border-l-4 border-primary pl-8 pb-12 ml-4">
+          <div class="absolute w-4 h-4 bg-primary rounded-full -left-2.5 top-0"></div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="flex flex-wrap justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-dark">Freelance — Chef de projet IT</h3>
+              <span class="text-sm text-primary font-semibold">Avr. 2024 - Aujourd'hui</span>
             </div>
-            <span class="rounded-full bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">Projet</span>
-          </header>
+            <p class="text-gray-600 mb-3">Plateforme web</p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Cadrage : recueil des besoins, cahier des charges, priorisation (backlog) et
+                  arbitrages fonctionnels</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Pilotage : planning, suivi d'avancement, coordination des intervenants</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Tests/recette : organisation de validations et corrections avant livraison</span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-          <ul class="mt-4 space-y-2 text-sm text-slate-700">${bulletsHtml}</ul>
+        <!-- Experience Item -->
+        <div class="relative border-l-4 border-primary pl-8 pb-12 ml-4">
+          <div class="absolute w-4 h-4 bg-primary rounded-full -left-2.5 top-0"></div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="flex flex-wrap justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-dark">Project Leader Junior</h3>
+              <span class="text-sm text-primary font-semibold">Janv. 2024 - Sept. 2024</span>
+            </div>
+            <p class="text-gray-600 mb-3">Tendances Event — Opérations / Logistique</p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Coordination et planification en environnement dynamique</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Reporting : rapports d'avancement, synthèse d'incidents, recommandations</span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-          <div class="mt-5 flex flex-wrap items-center gap-2">${tagsHtml}</div>
+        <!-- Experience Item -->
+        <div class="relative border-l-4 border-primary pl-8 pb-12 ml-4">
+          <div class="absolute w-4 h-4 bg-primary rounded-full -left-2.5 top-0"></div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="flex flex-wrap justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-dark">Responsable Informatique / Développeur Full Stack
+              </h3>
+              <span class="text-sm text-primary font-semibold">Janv. 2023 - Déc. 2023</span>
+            </div>
+            <p class="text-gray-600 mb-3">Studio Photo Lucas (PME) — Douala</p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Développement d'un applicatif métier (Laravel/Livewire) : fonctionnalités,
+                  correctifs, amélioration continue</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Maintenance & qualité : analyse d'incidents, correction d'anomalies, tests de
+                  vérification</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Requêtes SQL (extraction/fiabilisation) pour sécuriser les traitements
+                  métiers</span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-          ${
-            linkHref
-              ? `<div class="mt-6">
-                  <a href="${linkHref}" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-primary/40"
-                    aria-label="${linkLabel}">
-                    ${linkLabel} <span aria-hidden="true">↗</span>
-                  </a>
-                </div>`
-              : ""
-          }
-        </article>
-      `;
+        <!-- Experience Item -->
+        <div class="relative border-l-4 border-primary pl-8 ml-4">
+          <div class="absolute w-4 h-4 bg-primary rounded-full -left-2.5 top-0"></div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="flex flex-wrap justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-dark">Développeur Web</h3>
+              <span class="text-sm text-primary font-semibold">Juil. 2020 - Nov. 2020</span>
+            </div>
+            <p class="text-gray-600 mb-3">OuiCare — Douala</p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Création/évolution d'endpoints et logique métier (PHP CodeIgniter), échanges
+                  JSON</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Optimisation de requêtes SQL Server/MySQL ; tests fonctionnels et documentation
+                  technique</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      const softSkillChip = (text) =>
-        `<span class="rounded-full bg-white px-3 py-1 text-sm text-slate-700 ring-1 ring-slate-200">${text}</span>`;
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Compétences<span class="text-primary">.</span></h2>
+      <p class="text-center text-gray-600 mb-12">Technologies et outils que je maîtrise</p>
 
-      // Data from your 2 CV (strictly based on the provided LaTeX content)
-      const profiles = {
-        dev: {
-          activeLabel: "Profil actif : Développeur Web PHP",
-          heroTitle: "Alternance — Développeur Web PHP",
-          heroSubtitle: "(Symfony / Laravel)",
-          heroMobility: "Toute la France",
-          durationNote: "1 à 2 ans",
-          heroSummary:
-            "Développeur web orienté applications métier, je code en PHP depuis 2019 (POO, MVC). J’ai une expérience concrète sur Laravel en contexte PME (développement, maintenance, correction d’anomalies, support) et je structure ma montée en compétences sur Symfony (API REST, Doctrine, sécurité). Je recherche une alternance pour contribuer à la conception, au développement, à la mise en production via Git et à l’amélioration continue (performances, qualité, correction de bugs).",
-          aboutText:
-            "Développeur web orienté applications métier, je code en PHP depuis 2019 (POO, MVC). Expérience concrète sur Laravel en PME et montée en compétences sur Symfony (API REST, Doctrine, sécurité). Objectif : contribuer à la conception, au développement, à la mise en production via Git et à l’amélioration continue (performances, qualité, correction de bugs).",
-          highlights: [
-            "PHP 8 (POO, MVC) • Laravel en contexte PME",
-            "Montée en compétences Symfony : API REST, Doctrine, sécurité",
-            "Maintenance : debug, correction d’anomalies, documentation",
-          ],
-          softSkills: ["curiosité", "autonomie", "organisation", "esprit d’équipe", "souci du détail"],
-          skillsCards: [
-            skillCard(
-              "Back-end (PHP)",
-              "Conception de fonctionnalités, logique métier, API.",
-              [
-                tag("PHP 8 : POO, MVC, bonnes pratiques", "primary"),
-                tag("Laravel : fonctionnalités, maintenance, auth", "primary"),
-                tag("Symfony : routing, services, security (projet en cours)", "primary"),
-                tag("API REST (bases)", "primary"),
-              ].join("")
-            ),
-            skillCard(
-              "Base de données",
-              "Modélisation et requêtes SQL orientées exploitation.",
-              [
-                tag("MySQL : requêtes, jointures, optimisation (bases)"),
-                tag("ORM : Doctrine (Symfony), Eloquent (Laravel)"),
-                tag("Modélisation : entités, relations, contraintes"),
-              ].join("")
-            ),
-            skillCard(
-              "Web & outillage",
-              "Qualité, collaboration et mise en production.",
-              [tag("Git : versioning, branches, PR (bases)", "accent"), tag("HTML/CSS : responsive (bases)"), tag("Qualité : debug, logs, correction d’anomalies")].join("")
-            ),
-          ],
-          exp1Bullets: [
-            "Développement web : conception et livraison de fonctionnalités (Laravel/Livewire), structuration de la logique métier.",
-            "Maintenance : correction de bugs, suivi régulier des anomalies, amélioration de la robustesse et documentation.",
-            "Données : requêtes SQL pour extraction/fiabilisation et optimisation de traitements métiers.",
-          ],
-          exp2Bullets: [
-            "Back-end : création/évolution d’endpoints et logique métier (PHP CodeIgniter) ; échanges JSON.",
-            "BDD : optimisation de requêtes SQL Server/MySQL ; tests fonctionnels et documentation technique.",
-          ],
-          edu1Focus: "Focus : Symfony, architecture, qualité, Git, Docker, React.",
-          edu2Focus: "Focus : Python, data management, bases ML.",
-          projects: [
-            projectCard(
-              "Application de gestion des candidatures + IA (Symfony + Next.js) — en cours",
-              "Projet personnel",
-              "https://github.com/diiblo/candidate-apps",
-              "Voir sur GitHub",
-              [
-                bullet("<strong>Back-end Symfony</strong> : API REST, entités/ORM (Doctrine), validation, sécurité (auth/roles) ; endpoints candidature/offres/utilisateurs."),
-                bullet("<strong>Front Next.js</strong> : interface web (pages, formulaires), consommation d’API, gestion des états (loading/erreurs)."),
-                bullet("<strong>Brique IA</strong> : aide au tri/qualification des candidatures (ex. scoring, suggestions, synthèse) avec garde-fous et traçabilité."),
-                bullet("Delivery : Git (workflow), documentation (README), Docker/local selon besoin."),
-              ].join(""),
-              [tag("Symfony", "primary"), tag("Doctrine", "primary"), tag("API REST", "primary"), tag("Next.js"), tag("Auth/Rôles"), tag("Git"), tag("Docker (selon besoin)")].join("")
-            ),
-            projectCard(
-              "BMS Website — Plateforme Web (CodeIgniter) + Démo Livewire (Laravel)",
-              "Projet personnel",
-              "https://github.com/diiblo/bms-website",
-              "Voir sur GitHub",
-              [
-                bullet("<strong>Version principale (CodeIgniter)</strong> : site vitrine + blog avec <strong>back-office complet</strong> (auth session, rôles Admin/Éditeur, CRUD articles, CRUD publicités, dashboard KPI)."),
-                bullet("<strong>Côté public</strong> : pages vitrine, blog (liste/détail), affichage de publicités par emplacements (header/sidebar/footer)."),
-                bullet("<strong>Qualité / exploitation</strong> : validation serveur, organisation MVC, UI en JS natif + jQuery, Bootstrap, base MySQL."),
-                bullet("<strong>Version secondaire (Laravel + Livewire)</strong> : mise en pratique de Livewire."),
-              ].join(""),
-              [tag("CodeIgniter", "primary"), tag("Laravel", "primary"), tag("Livewire", "primary"), tag("MySQL"), tag("Bootstrap"), tag("jQuery"), tag("MVC"), tag("Dashboard KPI")].join("")
-            ),
-          ],
-        },
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Frontend -->
+        <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl border border-purple-100">
+          <h3 class="text-xl font-bold mb-4 text-primary">Front-end</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">HTML/CSS</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">JavaScript</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">React</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Next.js</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Tailwind</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Bootstrap</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">SASS</span>
+          </div>
+        </div>
 
-        ai: {
-          activeLabel: "Profil actif : Chef de Projet IA / Data",
-          heroTitle: "Alternance — Chef de Projet IA / Data",
-          heroSubtitle: "(Audit process & pilotage)",
-          heroMobility: "Toute la France",
-          durationNote: "1 an",
-          heroSummary:
-            "Profil hybride Data/IA & SI (Bac+5) avec une base solide en développement et data engineering (Python, SQL, ML) et une expérience applicative métier (analyse de besoins, support, documentation). À l’aise pour cartographier des flux, cadrer des besoins, prioriser des cas d’usage IA, rédiger un cahier des charges et piloter une livraison (tests, validation, déploiement).",
-          aboutText:
-            "Profil hybride Data/IA & SI (Bac+5) : Python, SQL, ML (notions) et expérience applicative métier (analyse de besoins, support, documentation). Capacité à cartographier des flux, cadrer des besoins, prioriser des cas d’usage IA, rédiger un cahier des charges et piloter une livraison (tests, validation, déploiement).",
-          highlights: [
-            "Cadrage & audit : cartographie process/flux, recueil besoins (bases)",
-            "Data/IA : Python, SQL, ML (notions), Power BI (dashboards), DAX (notions)",
-            "Pilotage : roadmap, recette fonctionnelle, documentation, conduite du changement",
-          ],
-          softSkills: ["organisation", "gestion des priorités", "aisance relationnelle", "sens du service", "rigueur"],
-          skillsCards: [
-            skillCard(
-              "Cadrage & audit",
-              "Cadrer, documenter et recommander (bases).",
-              [
-                tag("Cartographie process & flux (bases)", "primary"),
-                tag("Recueil besoins : ateliers, user stories (bases)", "primary"),
-                tag("Rédaction : spécifications (fonctionnelles/tech)", "primary"),
-                tag("Recommandations : faisabilité, ROI (bases)", "primary"),
-              ].join("")
-            ),
-            skillCard(
-              "Data / IA",
-              "Préparer, requêter, analyser, restituer.",
-              [
-                tag("Python : data prep, notebooks, scripts"),
-                tag("SQL : extraction, jointures, qualité"),
-                tag("ML : notions supervisé, évaluation"),
-                tag("Data viz : Power BI (dashboards), DAX notions"),
-              ].join("")
-            ),
-            skillCard(
-              "Pilotage & adoption",
-              "Organiser la livraison et accompagner l’adoption.",
-              [
-                tag("Roadmap : priorisation, suivi d’avancement", "accent"),
-                tag("Tests : recette fonctionnelle, validation", "accent"),
-                tag("Documentation : guides, CR, procédures", "accent"),
-                tag("Conduite du changement : pédagogie, support", "accent"),
-              ].join("")
-            ),
-          ],
-          exp1Bullets: [
-            "<strong>Cadrage & besoin</strong> : recueil des besoins métiers, priorisation des évolutions, documentation et formation utilisateurs.",
-            "<strong>Pilotage “run”</strong> : suivi d’incidents, analyse de causes, corrections, stabilisation et amélioration des process.",
-            "<strong>Données</strong> : requêtes SQL (extraction/fiabilisation) et mise en place de contrôles simples pour fiabiliser les traitements.",
-          ],
-          exp2Bullets: [
-            "Développement d’API et logique métier (PHP) ; optimisation SQL Server/MySQL.",
-            "Tests fonctionnels et documentation : rédaction technique et suivi des correctifs.",
-          ],
-          edu1Focus: "Focus : architecture, gestion de projet, qualité, data & intégration.",
-          edu2Focus: "Focus : Python, data management, machine learning, pipelines.",
-          projects: [
-            projectCard(
-              "Prédiction élections américaines (Python + Power BI)",
-              "Projet personnel",
-              "https://github.com/diiblo/us_election_project",
-              "Voir sur GitHub",
-              [
-                bullet("Préparation et structuration des données, définition d’indicateurs et restitution via <strong>Power BI</strong>."),
-                bullet("Création de tableaux de bord et KPI (Power Query, <strong>DAX notions</strong>) pour analyse et comparaison."),
-                bullet("Démarche orientée décision : synthèse, interprétation, limites et documentation."),
-              ].join(""),
-              [tag("Python", "primary"), tag("Power BI", "primary"), tag("KPI"), tag("Power Query"), tag("DAX (notions)")].join("")
-            ),
-            projectCard(
-              "Prédiction livraison de colis (Python / Machine Learning)",
-              "Projet personnel",
-              "https://github.com/diiblo/Prediction_livraison_colis",
-              "Voir sur GitHub",
-              [
-                bullet("Préparation des données, entraînement et évaluation d’un modèle ; démarche orientée mesure (qualité, performance)."),
-                bullet("Piste d’usage : scoring/alertes (retards), indicateurs de suivi et documentation."),
-              ].join(""),
-              [tag("Python", "accent"), tag("Machine Learning", "accent"), tag("Évaluation"), tag("Scoring")].join("")
-            ),
-          ],
-        },
-      };
+        <!-- Backend -->
+        <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl border border-purple-100">
+          <h3 class="text-xl font-bold mb-4 text-primary">Back-end</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">PHP 8</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Laravel</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Symfony</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Node.js</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Express</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">API REST</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Doctrine</span>
+          </div>
+        </div>
 
-      // Render function
-      function renderProfile(key) {
-        const p = profiles[key];
+        <!-- Data & Tools -->
+        <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl border border-purple-100">
+          <h3 class="text-xl font-bold mb-4 text-primary">Data & IA</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">SQL</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">MySQL</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">PostgreSQL</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Machine
+              Learning</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Power BI</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">DAX</span>
+          </div>
+        </div>
 
-        // Header label
-        document.getElementById("activeRoleLabel").textContent = p.activeLabel;
+        <!-- Outils -->
+        <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl border border-purple-100">
+          <h3 class="text-xl font-bold mb-4 text-primary">Outils & Qualité</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Git</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Docker</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Jira</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Tests</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">SEO</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Agile/Scrum</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Documentation</span>
+          </div>
+        </div>
+      </div>
 
-        // Hero
-        document.getElementById("heroTitle").textContent = p.heroTitle;
-        document.getElementById("heroSubtitle").textContent = p.heroSubtitle;
-        document.getElementById("heroMobility").textContent = p.heroMobility;
-        document.getElementById("durationNote").textContent = p.durationNote;
-        document.getElementById("heroSummary").textContent = p.heroSummary;
+      <!-- Soft Skills -->
+      <div class="max-w-4xl mx-auto mt-12">
+        <h3 class="text-2xl font-bold text-center mb-6">Soft Skills</h3>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Autonomie</span>
+          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Proactivité</span>
+          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Rigueur</span>
+          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Esprit
+            d'équipe</span>
+          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Communication</span>
+          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Curiosité
+            technologique</span>
+          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Gestion du
+            stress</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // About
-        document.getElementById("aboutText").textContent = p.aboutText;
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Projets<span class="text-primary">.</span></h2>
+      <p class="text-center text-gray-600 mb-12">Une sélection de mes réalisations</p>
 
-        // Highlights
-        const hl = document.getElementById("highlights");
-        hl.innerHTML = p.highlights.map((t) => bullet(t)).join("");
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Project Card -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-primary to-purple-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">📱</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Application gestion candidatures + IA</h3>
+            <p class="text-gray-600 mb-4">Symfony + Next.js — API REST, authentification, scoring IA avec
+              logique de traçabilité</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Symfony</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Next.js</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">IA</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">API REST</span>
+            </div>
+            <a href="https://github.com/diiblo/candidate-apps" target="_blank"
+              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
+              Voir le projet
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
 
-        // Soft skills chips
-        const ss = document.getElementById("softSkills");
-        ss.innerHTML = p.softSkills.map(softSkillChip).join("");
+        <!-- Project Card -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-purple-500 to-pink-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">🌐</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">BMS Website</h3>
+            <p class="text-gray-600 mb-4">Plateforme web (CodeIgniter) + démo Livewire — Site vitrine + blog
+              avec back-office complet</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">CodeIgniter</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Laravel</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Livewire</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">MySQL</span>
+            </div>
+            <a href="https://github.com/diiblo/bms-website" target="_blank"
+              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
+              Voir le projet
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
 
-        // Skills cards
-        document.getElementById("skillsGrid").innerHTML = p.skillsCards.join("");
+        <!-- Project Card -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-blue-500 to-cyan-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">🗳️</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Prédiction élections américaines</h3>
+            <p class="text-gray-600 mb-4">Python + Power BI — Analyse de données, tableaux de bord et KPI
+              avec DAX</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Python</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Power BI</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">DAX</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Data Analysis</span>
+            </div>
+            <a href="https://github.com/diiblo/us_election_project" target="_blank"
+              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
+              Voir le projet
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
 
-        // Experience bullets
-        document.getElementById("exp1Bullets").innerHTML = p.exp1Bullets.map((t) => bullet(t)).join("");
-        document.getElementById("exp2Bullets").innerHTML = p.exp2Bullets.map((t) => bullet(t)).join("");
+        <!-- Project Card -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">📦</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Prédiction livraison de colis</h3>
+            <p class="text-gray-600 mb-4">Python / Machine Learning — Modèle prédictif avec scoring et
+              alertes retards</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Python</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Machine Learning</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Scikit-learn</span>
+            </div>
+            <a href="https://github.com/diiblo/Prediction_livraison_colis" target="_blank"
+              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
+              Voir le projet
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
 
-        // Education focus
-        document.getElementById("edu1Focus").textContent = p.edu1Focus;
-        document.getElementById("edu2Focus").textContent = p.edu2Focus;
+        <!-- Project Card -->
+        <div
+          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">📊</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Hotline Project</h3>
+            <p class="text-gray-600 mb-4">Simulation gestion de projet IT — WBS, Gantt, chemin critique,
+              allocation ressources (projet académique)</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Gestion de projet</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Planification</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Agile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Projects
-        document.getElementById("projectsGrid").innerHTML = p.projects.join("");
+  <!-- Education & Certifications -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Formation & Certifications<span class="text-primary">.</span></h2>
+      <p class="text-center text-gray-600 mb-12">Mon parcours académique et mes certifications</p>
 
-        // Button states
-        const btnDev = document.getElementById("btnDev");
-        const btnAI = document.getElementById("btnAI");
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        <!-- Education -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-primary">📚 Formation</h3>
+          <div class="space-y-6">
+            <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+              <h4 class="font-bold text-lg mb-2">Mastère Tech Lead Full Stack</h4>
+              <p class="text-gray-600 mb-2">L'école .decode, Paris</p>
+              <p class="text-sm text-primary font-semibold mb-2">Depuis Janvier 2026 — En cours</p>
+              <p class="text-sm text-gray-600">Focus : Symfony, React, architecture, Docker, qualité
+                logicielle</p>
+            </div>
+            <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+              <h4 class="font-bold text-lg mb-2">Mastère 1 Data Engineering</h4>
+              <p class="text-gray-600 mb-2">ECE, Paris</p>
+              <p class="text-sm text-primary font-semibold mb-2">Sept. 2024 - Avr. 2025</p>
+              <p class="text-sm text-gray-600">Focus : Python, Big data, data management, bases ML</p>
+            </div>
+            <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+              <h4 class="font-bold text-lg mb-2">Licence Génie Logiciel</h4>
+              <p class="text-gray-600 mb-2">Institut Universitaire de l'Estuaire, Douala</p>
+              <p class="text-sm text-primary font-semibold mb-2">2019 - 2022</p>
+              <p class="text-sm text-gray-600">Focus : PHP, C#, algorithmique, UML, gestion de projet</p>
+            </div>
+          </div>
+        </div>
 
-        if (key === "dev") {
-          btnDev.className =
-            "rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:ring-2 focus-visible:ring-primary/40";
-          btnAI.className =
-            "rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-primary/40";
-        } else {
-          btnAI.className =
-            "rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:ring-2 focus-visible:ring-primary/40";
-          btnDev.className =
-            "rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-50 focus-visible:ring-2 focus-visible:ring-primary/40";
-        }
-      }
+        <!-- Certifications -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-primary">🏆 Certifications</h3>
+          <div class="space-y-4">
+            <a href="https://document-factory.datascientest.com/verify/76982563-6c55-496b-904b-f1d2cb959594"
+              target="_blank"
+              class="block bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-md transition">
+              <div class="flex items-start justify-between">
+                <div>
+                  <h4 class="font-bold mb-1">Python for Data Science</h4>
+                  <p class="text-sm text-gray-600">DataScientest</p>
+                </div>
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                  </path>
+                </svg>
+              </div>
+            </a>
+            <a href="https://document-factory.datascientest.com/verify/7fb49bbb-5628-4de0-9ff2-cc3d8a4836cc"
+              target="_blank"
+              class="block bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-md transition">
+              <div class="flex items-start justify-between">
+                <div>
+                  <h4 class="font-bold mb-1">Machine Learning</h4>
+                  <p class="text-sm text-gray-600">DataScientest</p>
+                </div>
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                  </path>
+                </svg>
+              </div>
+            </a>
+            <a href="https://www.freecodecamp.org/certification/fcce95386f1-7e12-4994-a209-c6a82ed58525/foundational-c-sharp-with-microsoft"
+              target="_blank"
+              class="block bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-md transition">
+              <div class="flex items-start justify-between">
+                <div>
+                  <h4 class="font-bold mb-1">Foundational C# with Microsoft</h4>
+                  <p class="text-sm text-gray-600">freeCodeCamp</p>
+                </div>
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                  </path>
+                </svg>
+              </div>
+            </a>
+          </div>
 
-      // Footer year
-      document.getElementById("year").textContent = new Date().getFullYear();
+          <!-- Languages -->
+          <div class="mt-8 bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+            <h4 class="font-bold text-lg mb-4">🌍 Langues</h4>
+            <div class="space-y-2">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold">Français</span>
+                <span class="text-sm text-primary">C2 - Bilingue</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-semibold">Anglais</span>
+                <span class="text-sm text-primary">B2 - Avancé</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      // Mobile menu toggle
-      const menuBtn = document.getElementById("menuBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
-      menuBtn.addEventListener("click", () => {
-        const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
-        menuBtn.setAttribute("aria-expanded", String(!isOpen));
-        mobileMenu.classList.toggle("hidden");
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gradient-to-br from-primary to-purple-700 text-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Travaillons ensemble<span class="text-purple-200">.</span>
+      </h2>
+      <p class="text-center text-purple-100 mb-12 max-w-2xl mx-auto">
+        Je recherche une alternance en tant que Développeur Full Stack ou Chef de Projet Web
+      </p>
+
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
+            <h3 class="text-xl font-bold mb-4">Informations</h3>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                  </path>
+                </svg>
+                <div>
+                  <p class="font-semibold">Téléphone</p>
+                  <a href="tel:+33618901402" class="text-purple-200 hover:text-white">06 18 90 14
+                    02</a>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                  </path>
+                </svg>
+                <div>
+                  <p class="font-semibold">Email</p>
+                  <a href="mailto:kingrahman98@hotmail.com"
+                    class="text-purple-200 hover:text-white break-all">kingrahman98@hotmail.com</a>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                  </path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <div>
+                  <p class="font-semibold">Localisation</p>
+                  <p class="text-purple-200">Île-de-France, France</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                  </path>
+                </svg>
+                <div>
+                  <p class="font-semibold">Disponibilité</p>
+                  <p class="text-purple-200">Dès que possible</p>
+                  <p class="text-sm text-purple-200">Rythme : 3 semaines / 1 semaine</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Card -->
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl flex flex-col justify-center">
+          <h3 class="text-2xl font-bold mb-4">Intéressé par mon profil ?</h3>
+          <p class="mb-6 text-purple-100">
+            N'hésitez pas à me contacter pour discuter de votre projet ou d'opportunités d'alternance.
+          </p>
+          <div class="space-y-4">
+            <a href="mailto:kingrahman98@hotmail.com"
+              class="block w-full px-6 py-3 bg-white text-primary rounded-lg hover:bg-purple-50 transition font-semibold text-center">
+              Envoyer un email
+            </a>
+            <div class="flex gap-4 justify-center">
+              <a href="https://linkedin.com/in/moctarr" target="_blank"
+                class="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg transition flex items-center"
+                aria-label="LinkedIn">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
+              <a href="https://github.com/diiblo" target="_blank"
+                class="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg transition flex items-center"
+                aria-label="GitHub">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="mb-2">&copy; 2026 King Rahman Moctarr Basiru. Tous droits réservés.</p>
+      <p class="text-gray-400 text-sm">Développé avec passion et TailwindCSS</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
       });
-      mobileMenu.addEventListener("click", (e) => {
-        const t = e.target;
-        if (t && t.tagName === "A") {
-          menuBtn.setAttribute("aria-expanded", "false");
-          mobileMenu.classList.add("hidden");
+    });
+
+    // Fade-in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
         }
       });
+    }, observerOptions);
 
-      // Profile switch
-      document.getElementById("btnDev").addEventListener("click", () => renderProfile("dev"));
-      document.getElementById("btnAI").addEventListener("click", () => renderProfile("ai"));
+    document.querySelectorAll('section > div > *').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
 
-      // Default: dev profile
-      renderProfile("dev");
-    </script>
-  </body>
 </html>
-
