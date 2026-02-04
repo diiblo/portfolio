@@ -37,8 +37,32 @@
       animation: fadeIn 0.6s ease-out forwards;
     }
 
+    @keyframes fadeInProjects {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .project-fade-in {
+      animation: fadeInProjects 0.4s ease-out forwards;
+    }
+
     html {
       scroll-behavior: smooth;
+    }
+
+    .project-card {
+      display: none;
+    }
+
+    .project-card.active {
+      display: block;
     }
   </style>
 </head>
@@ -316,8 +340,12 @@
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">PHP 8</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Laravel</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Symfony</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">C#</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Visual Basic</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Node.js</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Express</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Django</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">FastAPI</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">API REST</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Doctrine</span>
           </div>
@@ -354,19 +382,17 @@
       </div>
 
       <!-- Soft Skills -->
-      <div class="max-w-4xl mx-auto mt-12">
-        <h3 class="text-2xl font-bold text-center mb-6">Soft Skills</h3>
-        <div class="flex flex-wrap justify-center gap-3">
-          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Autonomie</span>
-          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Proactivité</span>
-          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Rigueur</span>
-          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Esprit
-            d'équipe</span>
-          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Communication</span>
-          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Curiosité
-            technologique</span>
-          <span class="px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold">Gestion du
-            stress</span>
+      <div class="max-w-4xl mx-auto mt-16">
+        <h3 class="text-2xl font-bold text-center mb-8 text-dark">Soft Skills</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Autonomie</span>
+          <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Proactivité</span>
+          <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Rigueur</span>
+          <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Esprit d'équipe</span>
+          <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Communication</span>
+          <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Curiosité technologique</span>
+          <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Gestion du stress</span>
+          <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Organisation</span>
         </div>
       </div>
     </div>
@@ -376,12 +402,55 @@
   <section id="projects" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-4">Projets<span class="text-primary">.</span></h2>
-      <p class="text-center text-gray-600 mb-12">Une sélection de mes réalisations</p>
+      <p class="text-center text-gray-600 mb-8">Une sélection de mes réalisations</p>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <!-- Project Card -->
-        <div
-          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+      <!-- Category Filters -->
+      <div class="flex justify-center gap-4 mb-12">
+        <button onclick="filterProjects('dev')" id="btn-dev"
+          class="filter-btn px-8 py-3 bg-primary text-white rounded-lg font-semibold transition hover:bg-purple-700 shadow-md">
+          💻 Développement Web
+        </button>
+        <button onclick="filterProjects('data')" id="btn-data"
+          class="filter-btn px-8 py-3 bg-white text-primary border-2 border-primary rounded-lg font-semibold transition hover:bg-primary hover:text-white">
+          📊 Data & Analytics
+        </button>
+      </div>
+
+      <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- DEV PROJECTS -->
+        
+        <!-- IziCamer -->
+        <div data-category="dev"
+          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-yellow-500 to-orange-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">🛒</div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="text-xl font-bold">IziCamer</h3>
+              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">EN LIGNE</span>
+            </div>
+            <p class="text-gray-600 mb-4">Plateforme d'annonces en ligne — Le "LeBonCoin camerounais" permettant de poster et consulter des annonces de produits</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">PHP Natif</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">JavaScript</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">HTML/CSS</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">MySQL</span>
+            </div>
+            <a href="https://www.izicamer.com/" target="_blank"
+              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
+              Visiter le site
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Candidate Apps -->
+        <div data-category="dev"
+          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="bg-gradient-to-br from-primary to-purple-600 h-48 flex items-center justify-center">
             <div class="text-white text-6xl">📱</div>
           </div>
@@ -406,9 +475,9 @@
           </div>
         </div>
 
-        <!-- Project Card -->
-        <div
-          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <!-- BMS Website -->
+        <div data-category="dev"
+          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="bg-gradient-to-br from-purple-500 to-pink-600 h-48 flex items-center justify-center">
             <div class="text-white text-6xl">🌐</div>
           </div>
@@ -433,9 +502,78 @@
           </div>
         </div>
 
-        <!-- Project Card -->
-        <div
-          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <!-- Gestion Factures VB.NET -->
+        <div data-category="dev"
+          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-indigo-500 to-blue-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">🧾</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Application gestion de factures</h3>
+            <p class="text-gray-600 mb-4">VB.NET / WinForms — Application desktop avec authentification, gestion de commandes et impression de factures (2020)</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">VB.NET</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">WinForms</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">MySQL</span>
+            </div>
+            <a href="https://github.com/diiblo/facture-visual-basic" target="_blank"
+              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
+              Voir le projet
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Générateur mot de passe C# -->
+        <div data-category="dev"
+          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-cyan-500 to-teal-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">🔐</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Générateur de mots de passe</h3>
+            <p class="text-gray-600 mb-4">C# — Application de génération de mots de passe sécurisés avec options de personnalisation</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">C#</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Sécurité</span>
+            </div>
+            <a href="https://github.com/diiblo/Generateur_mot_de_passe" target="_blank"
+              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
+              Voir le projet
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hotline Project -->
+        <div data-category="dev"
+          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">📊</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Hotline Project</h3>
+            <p class="text-gray-600 mb-4">Simulation gestion de projet IT — WBS, Gantt, chemin critique,
+              allocation ressources (projet académique)</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Gestion de projet</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Planification</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Agile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DATA PROJECTS -->
+
+        <!-- US Elections -->
+        <div data-category="data"
+          class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="bg-gradient-to-br from-blue-500 to-cyan-600 h-48 flex items-center justify-center">
             <div class="text-white text-6xl">🗳️</div>
           </div>
@@ -460,9 +598,9 @@
           </div>
         </div>
 
-        <!-- Project Card -->
-        <div
-          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <!-- Package Delivery -->
+        <div data-category="data"
+          class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
             <div class="text-white text-6xl">📦</div>
           </div>
@@ -483,24 +621,6 @@
                 </path>
               </svg>
             </a>
-          </div>
-        </div>
-
-        <!-- Project Card -->
-        <div
-          class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">📊</div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Hotline Project</h3>
-            <p class="text-gray-600 mb-4">Simulation gestion de projet IT — WBS, Gantt, chemin critique,
-              allocation ressources (projet académique)</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Gestion de projet</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Planification</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Agile</span>
-            </div>
           </div>
         </div>
       </div>
@@ -611,7 +731,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gradient-to-br from-primary to-purple-700 text-white">
+  <section id="contact" class="py-20 bg-primary text-white">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-4">Travaillons ensemble<span class="text-purple-200">.</span>
       </h2>
@@ -633,7 +753,7 @@
                 </svg>
                 <div>
                   <p class="font-semibold">Téléphone</p>
-                  <a href="tel:+33618901402" class="text-purple-200 hover:text-white">06 18 90 14
+                  <a href="tel:+33618901402" class="text-white hover:text-purple-200 transition">06 18 90 14
                     02</a>
                 </div>
               </div>
@@ -646,7 +766,7 @@
                 <div>
                   <p class="font-semibold">Email</p>
                   <a href="mailto:kingrahman98@hotmail.com"
-                    class="text-purple-200 hover:text-white break-all">kingrahman98@hotmail.com</a>
+                    class="text-white hover:text-purple-200 transition break-all">kingrahman98@hotmail.com</a>
                 </div>
               </div>
               <div class="flex items-start">
@@ -659,7 +779,7 @@
                 </svg>
                 <div>
                   <p class="font-semibold">Localisation</p>
-                  <p class="text-purple-200">Île-de-France, France</p>
+                  <p class="text-purple-100">Île-de-France, France</p>
                 </div>
               </div>
               <div class="flex items-start">
@@ -670,8 +790,8 @@
                 </svg>
                 <div>
                   <p class="font-semibold">Disponibilité</p>
-                  <p class="text-purple-200">Dès que possible</p>
-                  <p class="text-sm text-purple-200">Rythme : 3 semaines / 1 semaine</p>
+                  <p class="text-purple-100">Dès que possible</p>
+                  <p class="text-sm text-purple-100">Rythme : 3 semaines / 1 semaine</p>
                 </div>
               </div>
             </div>
@@ -737,6 +857,40 @@
         mobileMenu.classList.add('hidden');
       });
     });
+
+    // Projects filtering
+    function filterProjects(category) {
+      const projects = document.querySelectorAll('.project-card');
+      const btnDev = document.getElementById('btn-dev');
+      const btnData = document.getElementById('btn-data');
+
+      // Update button styles
+      if (category === 'dev') {
+        btnDev.classList.remove('bg-white', 'text-primary', 'border-2', 'border-primary');
+        btnDev.classList.add('bg-primary', 'text-white', 'shadow-md');
+        btnData.classList.remove('bg-primary', 'text-white', 'shadow-md');
+        btnData.classList.add('bg-white', 'text-primary', 'border-2', 'border-primary');
+      } else {
+        btnData.classList.remove('bg-white', 'text-primary', 'border-2', 'border-primary');
+        btnData.classList.add('bg-primary', 'text-white', 'shadow-md');
+        btnDev.classList.remove('bg-primary', 'text-white', 'shadow-md');
+        btnDev.classList.add('bg-white', 'text-primary', 'border-2', 'border-primary');
+      }
+
+      // Filter projects with animation
+      projects.forEach((project, index) => {
+        project.classList.remove('active', 'project-fade-in');
+        
+        setTimeout(() => {
+          if (project.dataset.category === category) {
+            project.classList.add('active');
+            setTimeout(() => {
+              project.classList.add('project-fade-in');
+            }, index * 50);
+          }
+        }, 10);
+      });
+    }
 
     // Fade-in animation on scroll
     const observerOptions = {
