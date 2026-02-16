@@ -405,19 +405,76 @@
       <p class="text-center text-gray-600 mb-8">Une sélection de mes réalisations</p>
 
       <!-- Category Filters -->
-      <div class="flex justify-center gap-4 mb-12">
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
         <button onclick="filterProjects('dev')" id="btn-dev"
-          class="filter-btn px-8 py-3 bg-primary text-white rounded-lg font-semibold transition hover:bg-purple-700 shadow-md">
+          class="filter-btn px-6 py-3 bg-primary text-white rounded-lg font-semibold transition hover:bg-purple-700 shadow-md">
           💻 Développement Web
         </button>
         <button onclick="filterProjects('data')" id="btn-data"
-          class="filter-btn px-8 py-3 bg-white text-primary border-2 border-primary rounded-lg font-semibold transition hover:bg-primary hover:text-white">
+          class="filter-btn px-6 py-3 bg-white text-primary border-2 border-primary rounded-lg font-semibold transition hover:bg-primary hover:text-white">
           📊 Data & IA
+        </button>
+        <button onclick="filterProjects('pm')" id="btn-pm"
+          class="filter-btn px-6 py-3 bg-white text-primary border-2 border-primary rounded-lg font-semibold transition hover:bg-primary hover:text-white">
+          🎯 Gestion de Projet
         </button>
       </div>
 
       <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- DEV PROJECTS -->
+
+        <!-- Marketplace Carte Blanche -->
+        <div data-category="dev"
+          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">🏛️</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Carte Blanche - Marketplace d'enchères</h3>
+            <p class="text-gray-600 mb-4">Symfony + Neuron AI — Plateforme de vente de fonds de commerce via enchères physiques avec système de tickets</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Symfony</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">DTO</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Voters</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Docker</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">MCP</span>
+            </div>
+            <a href="https://github.com/smn-dst/carte-blanche" target="_blank"
+              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
+              Voir le projet
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Airbnb Clone Gamifié -->
+        <div data-category="dev"
+          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-red-500 to-pink-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">🏠</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Airbnb version gamifiée</h3>
+            <p class="text-gray-600 mb-4">Symfony — Clone Airbnb avec mécaniques de gamification, architecture services et sécurité avancée</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Symfony</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Services</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Voters</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Docker</span>
+            </div>
+            <a href="https://github.com/diiblo/airbnb-clone-symfony" target="_blank"
+              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
+              Voir le projet
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
 
         <!-- QuickAsk Extension Chrome -->
         <div data-category="dev"
@@ -603,24 +660,6 @@
           </div>
         </div>
 
-        <!-- Hotline Project -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">📊</div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Hotline Project</h3>
-            <p class="text-gray-600 mb-4">Simulation gestion de projet IT — WBS, Gantt, chemin critique,
-              allocation ressources (projet académique)</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Gestion de projet</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Planification</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Agile</span>
-            </div>
-          </div>
-        </div>
-
         <!-- DATA PROJECTS -->
 
         <!-- Classification LLM Local -->
@@ -699,6 +738,26 @@
                 </path>
               </svg>
             </a>
+          </div>
+        </div>
+
+        <!-- PROJECT MANAGEMENT PROJECTS -->
+
+        <!-- Hotline Project -->
+        <div data-category="pm"
+          class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
+            <div class="text-white text-6xl">📊</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Hotline Project</h3>
+            <p class="text-gray-600 mb-4">Simulation gestion de projet IT — WBS, Gantt, chemin critique,
+              allocation ressources (projet académique)</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Gestion de projet</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Planification</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Agile</span>
+            </div>
           </div>
         </div>
       </div>
@@ -941,19 +1000,18 @@
       const projects = document.querySelectorAll('.project-card');
       const btnDev = document.getElementById('btn-dev');
       const btnData = document.getElementById('btn-data');
+      const btnPm = document.getElementById('btn-pm');
 
-      // Update button styles
-      if (category === 'dev') {
-        btnDev.classList.remove('bg-white', 'text-primary', 'border-2', 'border-primary');
-        btnDev.classList.add('bg-primary', 'text-white', 'shadow-md');
-        btnData.classList.remove('bg-primary', 'text-white', 'shadow-md');
-        btnData.classList.add('bg-white', 'text-primary', 'border-2', 'border-primary');
-      } else {
-        btnData.classList.remove('bg-white', 'text-primary', 'border-2', 'border-primary');
-        btnData.classList.add('bg-primary', 'text-white', 'shadow-md');
-        btnDev.classList.remove('bg-primary', 'text-white', 'shadow-md');
-        btnDev.classList.add('bg-white', 'text-primary', 'border-2', 'border-primary');
-      }
+      // Reset all buttons
+      [btnDev, btnData, btnPm].forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-white', 'shadow-md');
+        btn.classList.add('bg-white', 'text-primary', 'border-2', 'border-primary');
+      });
+
+      // Activate selected button
+      const activeBtn = category === 'dev' ? btnDev : category === 'data' ? btnData : btnPm;
+      activeBtn.classList.remove('bg-white', 'text-primary', 'border-2', 'border-primary');
+      activeBtn.classList.add('bg-primary', 'text-white', 'shadow-md');
 
       // Filter projects with animation
       projects.forEach((project, index) => {
