@@ -616,4 +616,25 @@
       activeBtn.classList.remove('bg-white', 'text-primary', 'border-2', 'border-primary');
       activeBtn.classList.add('bg-primary', 'text-white', 'shadow-md');
       projects.forEach((project, index) => {
-        project.classList.remove('active', 'projec
+        project.classList.remove('active', 'project-fade-in');
+        setTimeout(() => {
+          if (project.dataset.category === category) {
+            project.classList.add('active');
+            setTimeout(() => {
+              project.classList.add('project-fade-in');
+            }, index * 50);
+          }
+        }, 10);
+      });
+    }
+
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('fade-in'); }
+      });
+    }, observerOptions);
+    document.querySelectorAll('section > div > *').forEach(el => { observer.observe(el); });
+  </script>
+</body>
+</html>
