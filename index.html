@@ -22,48 +22,18 @@
   </script>
   <style>
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    .fade-in {
-      animation: fadeIn 0.6s ease-out forwards;
-    }
-
+    .fade-in { animation: fadeIn 0.6s ease-out forwards; }
     @keyframes fadeInProjects {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
-
-    .project-fade-in {
-      animation: fadeInProjects 0.4s ease-out forwards;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .project-card {
-      display: none;
-    }
-
-    .project-card.active {
-      display: block;
-    }
+    .project-fade-in { animation: fadeInProjects 0.4s ease-out forwards; }
+    html { scroll-behavior: smooth; }
+    .project-card { display: none; }
+    .project-card.active { display: block; }
   </style>
 </head>
 
@@ -122,39 +92,22 @@
             Full Stack ou Chef de Projet Web.
           </p>
           <div class="flex flex-wrap gap-4">
-            <a href="#contact"
-              class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-purple-700 transition font-semibold">
-              Me contacter
-            </a>
-            <a href="#projects"
-              class="px-8 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition font-semibold">
-              Voir mes projets
-            </a>
+            <a href="#contact" class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-purple-700 transition font-semibold">Me contacter</a>
+            <a href="#projects" class="px-8 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition font-semibold">Voir mes projets</a>
           </div>
           <div class="flex gap-4 mt-8">
-            <a href="https://linkedin.com/in/moctarr" target="_blank"
-              class="text-gray-600 hover:text-primary transition" aria-label="LinkedIn">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
+            <a href="https://linkedin.com/in/moctarr" target="_blank" class="text-gray-600 hover:text-primary transition" aria-label="LinkedIn">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <a href="https://github.com/diiblo" target="_blank" class="text-gray-600 hover:text-primary transition"
-              aria-label="GitHub">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
+            <a href="https://github.com/diiblo" target="_blank" class="text-gray-600 hover:text-primary transition" aria-label="GitHub">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
           </div>
         </div>
         <div class="shrink-0 fade-in">
           <div class="relative">
             <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary to-purple-600 p-2">
-              <div
-                class="w-full h-full rounded-full bg-white flex items-center justify-center text-6xl font-bold text-primary">
-                KRMB
-              </div>
+              <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-6xl font-bold text-primary">KRMB</div>
             </div>
             <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-lg p-4 border-4 border-purple-100">
               <p class="text-sm font-semibold text-gray-700">Disponible en alternance</p>
@@ -170,30 +123,22 @@
   <section id="about" class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-4">Mon parcours<span class="text-primary">.</span></h2>
-      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        Développeur Full Stack avec 4+ années d'expérience en développement web et data engineering
-      </p>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Développeur Full Stack avec 4+ années d'expérience en développement web et data engineering</p>
       <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div
-          class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+        <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
           <div class="text-primary text-4xl mb-4">💻</div>
           <h3 class="text-xl font-bold mb-3">Développement Web</h3>
-          <p class="text-gray-600">Expert en PHP (Laravel, Symfony), JavaScript, React et Next.js. Expérience
-            en architecture MVC et API REST.</p>
+          <p class="text-gray-600">Expert en PHP (Laravel, Symfony), JavaScript, React et Next.js. Expérience en architecture MVC et API REST.</p>
         </div>
-        <div
-          class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+        <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
           <div class="text-primary text-4xl mb-4">📊</div>
           <h3 class="text-xl font-bold mb-3">Data & IA</h3>
-          <p class="text-gray-600">Compétences en Python, SQL, Machine Learning et Data Engineering.
-            Certification Python for Data Science et ML.</p>
+          <p class="text-gray-600">Compétences en Python, SQL, Machine Learning et Data Engineering. Certification Python for Data Science et ML.</p>
         </div>
-        <div
-          class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
+        <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-sm border border-purple-100 hover:shadow-md transition">
           <div class="text-primary text-4xl mb-4">🚀</div>
           <h3 class="text-xl font-bold mb-3">Gestion de Projet</h3>
-          <p class="text-gray-600">Expérience en coordination d'équipe, pilotage de projets web et
-            méthodologies agiles (Scrum).</p>
+          <p class="text-gray-600">Expérience en coordination d'équipe, pilotage de projets web et méthodologies agiles (Scrum).</p>
         </div>
       </div>
     </div>
@@ -204,9 +149,42 @@
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-4">Expérience<span class="text-primary">.</span></h2>
       <p class="text-center text-gray-600 mb-12">Mon parcours professionnel</p>
-
       <div class="max-w-4xl mx-auto">
-        <!-- Experience Item -->
+
+        <!-- DIGIPLOME - NOUVEAU -->
+        <div class="relative border-l-4 border-primary pl-8 pb-12 ml-4">
+          <div class="absolute w-4 h-4 bg-primary rounded-full -left-2.5 top-0"></div>
+          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+            <div class="flex flex-wrap justify-between items-start mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-dark">Stagiaire Développeur Full Stack</h3>
+                <span class="inline-block mt-1 px-3 py-1 bg-purple-100 text-primary text-xs font-semibold rounded-full">Laravel · React · PostgreSQL</span>
+              </div>
+              <span class="text-sm text-primary font-semibold">Avr. 2025 - Sept. 2025</span>
+            </div>
+            <p class="text-gray-600 mb-3">Digiplome — Paris</p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Conception et développement d'une <strong>API backend Laravel (PHP)</strong> : gestion des diplômes et des utilisateurs, routes, validation, sécurité des accès.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Développement d'une interface utilisateur moderne en <strong>React</strong> : espace d'administration pour les établissements et interface de consultation pour les utilisateurs finaux.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Modélisation et gestion des données avec <strong>PostgreSQL</strong> ; mise en place d'un système de vérification des diplômes via <strong>QR code</strong> et lien sécurisé.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-primary mr-2">▸</span>
+                <span>Participation à l'amélioration de l'architecture applicative, rédaction de la documentation technique et tests de l'application.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FREELANCE -->
         <div class="relative border-l-4 border-primary pl-8 pb-12 ml-4">
           <div class="absolute w-4 h-4 bg-primary rounded-full -left-2.5 top-0"></div>
           <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
@@ -216,24 +194,14 @@
             </div>
             <p class="text-gray-600 mb-3">Plateforme web</p>
             <ul class="space-y-2 text-gray-700">
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Cadrage : recueil des besoins, cahier des charges, priorisation (backlog) et
-                  arbitrages fonctionnels</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Pilotage : planning, suivi d'avancement, coordination des intervenants</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Tests/recette : organisation de validations et corrections avant livraison</span>
-              </li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Cadrage : recueil des besoins, cahier des charges, priorisation (backlog) et arbitrages fonctionnels</span></li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Pilotage : planning, suivi d'avancement, coordination des intervenants</span></li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Tests/recette : organisation de validations et corrections avant livraison</span></li>
             </ul>
           </div>
         </div>
 
-        <!-- Experience Item -->
+        <!-- TENDANCES EVENT -->
         <div class="relative border-l-4 border-primary pl-8 pb-12 ml-4">
           <div class="absolute w-4 h-4 bg-primary rounded-full -left-2.5 top-0"></div>
           <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
@@ -243,49 +211,32 @@
             </div>
             <p class="text-gray-600 mb-3">Tendances Event — Opérations / Logistique</p>
             <ul class="space-y-2 text-gray-700">
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Coordination et planification en environnement dynamique</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Reporting : rapports d'avancement, synthèse d'incidents, recommandations</span>
-              </li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Coordination et planification en environnement dynamique</span></li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Macro <strong>VBA (Excel)</strong> : automatisation du traitement, des contrôles et de l'export des reportings équipe</span></li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Reporting : rapports d'avancement, synthèse d'incidents, recommandations</span></li>
             </ul>
           </div>
         </div>
 
-        <!-- Experience Item -->
+        <!-- STUDIO PHOTO LUCAS - avec WinForms -->
         <div class="relative border-l-4 border-primary pl-8 pb-12 ml-4">
           <div class="absolute w-4 h-4 bg-primary rounded-full -left-2.5 top-0"></div>
           <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
             <div class="flex flex-wrap justify-between items-start mb-3">
-              <h3 class="text-xl font-bold text-dark">Responsable Informatique / Développeur Full Stack
-              </h3>
+              <h3 class="text-xl font-bold text-dark">Responsable Informatique / Développeur Full Stack</h3>
               <span class="text-sm text-primary font-semibold">Janv. 2023 - Déc. 2023</span>
             </div>
             <p class="text-gray-600 mb-3">Studio Photo Lucas (PME) — Douala</p>
             <ul class="space-y-2 text-gray-700">
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Développement d'un applicatif métier (Laravel/Livewire) : fonctionnalités,
-                  correctifs, amélioration continue</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Maintenance & qualité : analyse d'incidents, correction d'anomalies, tests de
-                  vérification</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Requêtes SQL (extraction/fiabilisation) pour sécuriser les traitements
-                  métiers</span>
-              </li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Développement et MCO d'un applicatif métier en production (<strong>Laravel / Livewire</strong>) : évolutions fonctionnelles, correctifs, amélioration continue sur 12 mois</span></li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Développement d'applications <strong>desktop WinForms (.NET)</strong> pour des clients internes : gestion du suivi des documents et gestion de la comptabilité</span></li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Requêtes SQL (extraction/fiabilisation) pour sécuriser les traitements métiers</span></li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Support informatique : gestion du parc, incidents matériels/logiciels, formation des utilisateurs</span></li>
             </ul>
           </div>
         </div>
 
-        <!-- Experience Item -->
+        <!-- OUICARE -->
         <div class="relative border-l-4 border-primary pl-8 ml-4">
           <div class="absolute w-4 h-4 bg-primary rounded-full -left-2.5 top-0"></div>
           <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
@@ -295,19 +246,12 @@
             </div>
             <p class="text-gray-600 mb-3">OuiCare — Douala</p>
             <ul class="space-y-2 text-gray-700">
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Création/évolution d'endpoints et logique métier (PHP CodeIgniter), échanges
-                  JSON</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-primary mr-2">▸</span>
-                <span>Optimisation de requêtes SQL Server/MySQL ; tests fonctionnels et documentation
-                  technique</span>
-              </li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Création/évolution d'endpoints et logique métier (PHP CodeIgniter), échanges JSON</span></li>
+              <li class="flex items-start"><span class="text-primary mr-2">▸</span><span>Optimisation de requêtes SQL Server/MySQL ; tests fonctionnels et documentation technique</span></li>
             </ul>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -317,23 +261,19 @@
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-4">Compétences<span class="text-primary">.</span></h2>
       <p class="text-center text-gray-600 mb-12">Technologies et outils que je maîtrise</p>
-
       <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Frontend -->
         <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl border border-purple-100">
           <h3 class="text-xl font-bold mb-4 text-primary">Front-end</h3>
           <div class="flex flex-wrap gap-2">
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">HTML/CSS</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">JavaScript</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">TypeScript</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">React</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Next.js</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Tailwind</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Bootstrap</span>
-            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">SASS</span>
           </div>
         </div>
-
-        <!-- Backend -->
         <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl border border-purple-100">
           <h3 class="text-xl font-bold mb-4 text-primary">Back-end</h3>
           <div class="flex flex-wrap gap-2">
@@ -341,47 +281,50 @@
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Laravel</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Symfony</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">C#</span>
-            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Visual Basic</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">WinForms</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Node.js</span>
-            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Express</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Django</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">FastAPI</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">API REST</span>
-            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Doctrine</span>
           </div>
         </div>
-
-        <!-- Data & Tools -->
         <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl border border-purple-100">
           <h3 class="text-xl font-bold mb-4 text-primary">Data & IA</h3>
           <div class="flex flex-wrap gap-2">
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Python</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">SQL</span>
-            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">MySQL</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">PostgreSQL</span>
-            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Machine
-              Learning</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">MySQL</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Machine Learning</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Power BI</span>
-            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">DAX</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Ollama / LLM</span>
           </div>
         </div>
-
-        <!-- Outils -->
         <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl border border-purple-100">
           <h3 class="text-xl font-bold mb-4 text-primary">Outils & Qualité</h3>
           <div class="flex flex-wrap gap-2">
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Git</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Docker</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Linux</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Jira</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Tests</span>
-            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">SEO</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">CI/CD</span>
             <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Agile/Scrum</span>
-            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Documentation</span>
+          </div>
+        </div>
+
+        <!-- CMS & E-commerce -->
+        <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl border border-purple-100">
+          <h3 class="text-xl font-bold mb-4 text-primary">CMS & E-commerce</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">WordPress</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Shopify</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">WooCommerce</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Thèmes & plugins</span>
+            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm">Liquid</span>
           </div>
         </div>
       </div>
-
-      <!-- Soft Skills -->
       <div class="max-w-4xl mx-auto mt-16">
         <h3 class="text-2xl font-bold text-center mb-8 text-dark">Soft Skills</h3>
         <div class="flex flex-wrap justify-center gap-4">
@@ -391,7 +334,6 @@
           <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Esprit d'équipe</span>
           <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Communication</span>
           <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Curiosité technologique</span>
-          <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Gestion du stress</span>
           <span class="px-6 py-3 bg-primary text-white rounded-full text-base font-semibold shadow-sm hover:shadow-md transition">Organisation</span>
         </div>
       </div>
@@ -403,32 +345,15 @@
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-4">Projets<span class="text-primary">.</span></h2>
       <p class="text-center text-gray-600 mb-8">Une sélection de mes réalisations</p>
-
-      <!-- Category Filters -->
       <div class="flex flex-wrap justify-center gap-4 mb-12">
-        <button onclick="filterProjects('dev')" id="btn-dev"
-          class="filter-btn px-6 py-3 bg-primary text-white rounded-lg font-semibold transition hover:bg-purple-700 shadow-md">
-          💻 Développement Web
-        </button>
-        <button onclick="filterProjects('data')" id="btn-data"
-          class="filter-btn px-6 py-3 bg-white text-primary border-2 border-primary rounded-lg font-semibold transition hover:bg-primary hover:text-white">
-          📊 Data & IA
-        </button>
-        <button onclick="filterProjects('pm')" id="btn-pm"
-          class="filter-btn px-6 py-3 bg-white text-primary border-2 border-primary rounded-lg font-semibold transition hover:bg-primary hover:text-white">
-          🎯 Gestion de Projet
-        </button>
+        <button onclick="filterProjects('dev')" id="btn-dev" class="filter-btn px-6 py-3 bg-primary text-white rounded-lg font-semibold transition hover:bg-purple-700 shadow-md">💻 Développement Web</button>
+        <button onclick="filterProjects('data')" id="btn-data" class="filter-btn px-6 py-3 bg-white text-primary border-2 border-primary rounded-lg font-semibold transition hover:bg-primary hover:text-white">📊 Data & IA</button>
+        <button onclick="filterProjects('pm')" id="btn-pm" class="filter-btn px-6 py-3 bg-white text-primary border-2 border-primary rounded-lg font-semibold transition hover:bg-primary hover:text-white">🎯 Gestion de Projet</button>
       </div>
-
       <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <!-- DEV PROJECTS -->
 
-        <!-- Marketplace Carte Blanche -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">🏛️</div>
-          </div>
+        <div data-category="dev" class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-pink-500 to-rose-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">🏛️</div></div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Carte Blanche - Marketplace d'enchères</h3>
             <p class="text-gray-600 mb-4">Symfony + Neuron AI — Plateforme de vente de fonds de commerce via enchères physiques avec système de tickets</p>
@@ -439,50 +364,27 @@
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Docker</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">MCP</span>
             </div>
-            <a href="https://github.com/smn-dst/carte-blanche" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
+            <a href="https://github.com/smn-dst/carte-blanche" target="_blank" class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">Voir le projet <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
           </div>
         </div>
 
-        <!-- Airbnb Gamifié -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-red-500 to-pink-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">🏠</div>
-          </div>
+        <div data-category="dev" class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-red-500 to-pink-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">🏠</div></div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Airbnb version gamifiée</h3>
-            <p class="text-gray-600 mb-4">Symfony — Clone Airbnb avec mécaniques de gamification, architecture services et sécurité avancée</p>
+            <p class="text-gray-600 mb-4">Symfony — Clone Airbnb avec mécaniques de gamification, architecture DDD et sécurité avancée</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Symfony</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Services</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">DDD</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Voters</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Docker</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">DDD-Architecture</span>
             </div>
-            <a href="https://github.com/diiblo/AirbnbGamifie.git" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
+            <a href="https://github.com/diiblo/AirbnbGamifie.git" target="_blank" class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">Voir le projet <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
           </div>
         </div>
 
-        <!-- QuickAsk Extension Chrome -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-violet-500 to-purple-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">🔌</div>
-          </div>
+        <div data-category="dev" class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-violet-500 to-purple-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">🔌</div></div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">QuickAsk - Extension Chrome</h3>
             <p class="text-gray-600 mb-4">Extension Chrome combinant IA générative et blocs de texte automatiques pour améliorer la productivité</p>
@@ -490,270 +392,106 @@
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">JavaScript</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Chrome API</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">IA</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">HTML/CSS</span>
             </div>
-            <a href="https://github.com/diiblo/QuickAsk" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
+            <a href="https://github.com/diiblo/QuickAsk" target="_blank" class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">Voir le projet <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
           </div>
         </div>
 
-        <!-- IziCamer -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-yellow-500 to-orange-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">🛒</div>
-          </div>
+        <div data-category="dev" class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-yellow-500 to-orange-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">🛒</div></div>
           <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
               <h3 class="text-xl font-bold">IziCamer</h3>
               <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">EN LIGNE</span>
             </div>
-            <p class="text-gray-600 mb-4">Plateforme d'annonces en ligne — Le "LeBonCoin camerounais" permettant de poster et consulter des annonces de produits</p>
+            <p class="text-gray-600 mb-4">Plateforme d'annonces en ligne — Le "LeBonCoin camerounais" permettant de poster et consulter des annonces</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">PHP Natif</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">JavaScript</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">HTML/CSS</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">MySQL</span>
             </div>
-            <a href="https://www.izicamer.com/" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Visiter le site
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
+            <a href="https://www.izicamer.com/" target="_blank" class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">Visiter le site <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
           </div>
         </div>
 
-        <!-- Candidate Apps -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-primary to-purple-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">📱</div>
-          </div>
+        <div data-category="dev" class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-primary to-purple-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">📱</div></div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Application gestion candidatures + IA</h3>
-            <p class="text-gray-600 mb-4">Symfony + Next.js — API REST, authentification, scoring IA avec
-              logique de traçabilité</p>
+            <p class="text-gray-600 mb-4">Symfony + React — API REST, authentification, scoring IA avec logique de traçabilité</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Symfony</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Next.js</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">IA</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">React</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Tailwind</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">API REST</span>
             </div>
-            <a href="https://github.com/diiblo/candidate-apps" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
+            <a href="https://github.com/diiblo/candidate-apps" target="_blank" class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">Voir le projet <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
           </div>
         </div>
 
-        <!-- BMS Website -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-purple-500 to-pink-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">🌐</div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">BMS Website</h3>
-            <p class="text-gray-600 mb-4">Plateforme web (CodeIgniter) + démo Livewire — Site vitrine + blog
-              avec back-office complet</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">CodeIgniter</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Laravel</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Livewire</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">MySQL</span>
-            </div>
-            <a href="https://github.com/diiblo/bms-website" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- CRUD Django -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-emerald-500 to-green-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">⚙️</div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">CRUD Django - API & BDD</h3>
-            <p class="text-gray-600 mb-4">Entraînement Django — Implémentation CRUD complète avec modèles, endpoints et logique serveur</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Django</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Python</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">API REST</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">PostgreSQL</span>
-            </div>
-            <a href="https://github.com/diiblo/django-training" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Gestion Factures VB.NET -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-indigo-500 to-blue-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">🧾</div>
-          </div>
+        <div data-category="dev" class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-indigo-500 to-blue-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">🧾</div></div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Application gestion de factures</h3>
-            <p class="text-gray-600 mb-4">VB.NET / WinForms — Application desktop avec authentification, gestion de commandes et impression de factures (2020)</p>
+            <p class="text-gray-600 mb-4">VB.NET / WinForms — Application desktop avec authentification, gestion de commandes et impression de factures</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">VB.NET</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">WinForms</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">MySQL</span>
             </div>
-            <a href="https://github.com/diiblo/facture-visual-basic" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
+            <a href="https://github.com/diiblo/facture-visual-basic" target="_blank" class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">Voir le projet <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
           </div>
         </div>
 
-        <!-- Générateur mot de passe C# -->
-        <div data-category="dev"
-          class="project-card active bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-cyan-500 to-teal-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">🔐</div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Générateur de mots de passe</h3>
-            <p class="text-gray-600 mb-4">C# — Application de génération de mots de passe sécurisés avec options de personnalisation</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">C#</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Sécurité</span>
-            </div>
-            <a href="https://github.com/diiblo/Generateur_mot_de_passe" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- DATA PROJECTS -->
-
-        <!-- Classification LLM Local -->
-        <div data-category="data"
-          class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">🤖</div>
-          </div>
+        <div data-category="data" class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">🤖</div></div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Classification via LLM local (Ollama)</h3>
-            <p class="text-gray-600 mb-4">Classification automatique de données à l'enregistrement — Interface React avec intégration LLM</p>
+            <p class="text-gray-600 mb-4">Classification automatique de données — Interface React avec intégration LLM local et prompt engineering</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Ollama</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Python</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">React</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">LLM</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">HTML/CSS</span>
             </div>
-            <a href="https://github.com/diiblo/expense-auto-categorie" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
+            <a href="https://github.com/diiblo/expense-auto-categorie" target="_blank" class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">Voir le projet <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
           </div>
         </div>
 
-        <!-- US Elections -->
-        <div data-category="data"
-          class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-blue-500 to-cyan-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">🗳️</div>
-          </div>
+        <div data-category="data" class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-blue-500 to-cyan-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">🗳️</div></div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Prédiction élections américaines</h3>
-            <p class="text-gray-600 mb-4">Python + Power BI — Analyse de données, tableaux de bord et KPI
-              avec DAX</p>
+            <p class="text-gray-600 mb-4">Python + Power BI — Analyse de données, tableaux de bord et KPI avec DAX</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Python</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Power BI</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">DAX</span>
-              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Data Analysis</span>
+              <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">pandas</span>
             </div>
-            <a href="https://github.com/diiblo/us_election_project" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
+            <a href="https://github.com/diiblo/us_election_project" target="_blank" class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">Voir le projet <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
           </div>
         </div>
 
-        <!-- Package Delivery -->
-        <div data-category="data"
-          class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">📦</div>
-          </div>
+        <div data-category="data" class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-green-500 to-emerald-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">📦</div></div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Prédiction livraison de colis</h3>
-            <p class="text-gray-600 mb-4">Python / Machine Learning — Modèle prédictif avec scoring et
-              alertes retards</p>
+            <p class="text-gray-600 mb-4">Python / Machine Learning — Modèle prédictif avec scoring et alertes retards</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Python</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Machine Learning</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Scikit-learn</span>
             </div>
-            <a href="https://github.com/diiblo/Prediction_livraison_colis" target="_blank"
-              class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">
-              Voir le projet
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                </path>
-              </svg>
-            </a>
+            <a href="https://github.com/diiblo/Prediction_livraison_colis" target="_blank" class="inline-flex items-center text-primary hover:text-purple-700 font-semibold">Voir le projet <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
           </div>
         </div>
 
-        <!-- PROJECT MANAGEMENT PROJECTS -->
-
-        <!-- Hotline Project -->
-        <div data-category="pm"
-          class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
-            <div class="text-white text-6xl">📊</div>
-          </div>
+        <div data-category="pm" class="project-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center"><div class="text-white text-6xl">📊</div></div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">Hotline Project</h3>
-            <p class="text-gray-600 mb-4">Simulation gestion de projet IT — WBS, Gantt, chemin critique,
-              allocation ressources (projet académique)</p>
+            <p class="text-gray-600 mb-4">Simulation gestion de projet IT — WBS, Gantt, chemin critique, allocation ressources (projet académique)</p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Gestion de projet</span>
               <span class="px-2 py-1 bg-purple-100 text-primary text-xs rounded">Planification</span>
@@ -761,6 +499,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -770,9 +509,7 @@
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-4">Formation & Certifications<span class="text-primary">.</span></h2>
       <p class="text-center text-gray-600 mb-12">Mon parcours académique et mes certifications</p>
-
       <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-        <!-- Education -->
         <div>
           <h3 class="text-2xl font-bold mb-6 text-primary">📚 Formation</h3>
           <div class="space-y-6">
@@ -780,8 +517,7 @@
               <h4 class="font-bold text-lg mb-2">Mastère Tech Lead Full Stack</h4>
               <p class="text-gray-600 mb-2">L'école .decode, Paris</p>
               <p class="text-sm text-primary font-semibold mb-2">Depuis Janvier 2026 — En cours</p>
-              <p class="text-sm text-gray-600">Focus : Symfony, React, architecture, Docker, qualité
-                logicielle</p>
+              <p class="text-sm text-gray-600">Focus : Symfony, React, architecture, Docker, qualité logicielle</p>
             </div>
             <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
               <h4 class="font-bold text-lg mb-2">Mastère 1 Data Engineering</h4>
@@ -797,70 +533,24 @@
             </div>
           </div>
         </div>
-
-        <!-- Certifications -->
         <div>
           <h3 class="text-2xl font-bold mb-6 text-primary">🏆 Certifications</h3>
           <div class="space-y-4">
-            <a href="https://document-factory.datascientest.com/verify/76982563-6c55-496b-904b-f1d2cb959594"
-              target="_blank"
-              class="block bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-md transition">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h4 class="font-bold mb-1">Python for Data Science</h4>
-                  <p class="text-sm text-gray-600">DataScientest</p>
-                </div>
-                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                  </path>
-                </svg>
-              </div>
+            <a href="https://document-factory.datascientest.com/verify/76982563-6c55-496b-904b-f1d2cb959594" target="_blank" class="block bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-md transition">
+              <div class="flex items-start justify-between"><div><h4 class="font-bold mb-1">Python for Data Science</h4><p class="text-sm text-gray-600">DataScientest</p></div><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div>
             </a>
-            <a href="https://document-factory.datascientest.com/verify/7fb49bbb-5628-4de0-9ff2-cc3d8a4836cc"
-              target="_blank"
-              class="block bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-md transition">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h4 class="font-bold mb-1">Machine Learning</h4>
-                  <p class="text-sm text-gray-600">DataScientest</p>
-                </div>
-                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                  </path>
-                </svg>
-              </div>
+            <a href="https://document-factory.datascientest.com/verify/7fb49bbb-5628-4de0-9ff2-cc3d8a4836cc" target="_blank" class="block bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-md transition">
+              <div class="flex items-start justify-between"><div><h4 class="font-bold mb-1">Machine Learning</h4><p class="text-sm text-gray-600">DataScientest</p></div><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div>
             </a>
-            <a href="https://www.freecodecamp.org/certification/fcce95386f1-7e12-4994-a209-c6a82ed58525/foundational-c-sharp-with-microsoft"
-              target="_blank"
-              class="block bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-md transition">
-              <div class="flex items-start justify-between">
-                <div>
-                  <h4 class="font-bold mb-1">Foundational C# with Microsoft</h4>
-                  <p class="text-sm text-gray-600">freeCodeCamp</p>
-                </div>
-                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                  </path>
-                </svg>
-              </div>
+            <a href="https://www.freecodecamp.org/certification/fcce95386f1-7e12-4994-a209-c6a82ed58525/foundational-c-sharp-with-microsoft" target="_blank" class="block bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-md transition">
+              <div class="flex items-start justify-between"><div><h4 class="font-bold mb-1">Foundational C# with Microsoft</h4><p class="text-sm text-gray-600">freeCodeCamp</p></div><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></div>
             </a>
           </div>
-
-          <!-- Languages -->
           <div class="mt-8 bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
             <h4 class="font-bold text-lg mb-4">🌍 Langues</h4>
             <div class="space-y-2">
-              <div class="flex justify-between items-center">
-                <span class="font-semibold">Français</span>
-                <span class="text-sm text-primary">C2 - Bilingue</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="font-semibold">Anglais</span>
-                <span class="text-sm text-primary">B2 - Avancé</span>
-              </div>
+              <div class="flex justify-between items-center"><span class="font-semibold">Français</span><span class="text-sm text-primary">C2 - Bilingue</span></div>
+              <div class="flex justify-between items-center"><span class="font-semibold">Anglais</span><span class="text-sm text-primary">B2 - Avancé</span></div>
             </div>
           </div>
         </div>
@@ -871,99 +561,28 @@
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-primary text-white">
     <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-4">Travaillons ensemble<span class="text-purple-200">.</span>
-      </h2>
-      <p class="text-center text-purple-100 mb-12 max-w-2xl mx-auto">
-        Je recherche une alternance en tant que Développeur Full Stack ou Chef de Projet Web
-      </p>
-
+      <h2 class="text-4xl font-bold text-center mb-4">Travaillons ensemble<span class="text-purple-200">.</span></h2>
+      <p class="text-center text-purple-100 mb-12 max-w-2xl mx-auto">Je recherche une alternance en tant que Développeur Full Stack ou Chef de Projet Web</p>
       <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-        <!-- Contact Info -->
         <div class="space-y-6">
           <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
             <h3 class="text-xl font-bold mb-4">Informations</h3>
             <div class="space-y-4">
-              <div class="flex items-start">
-                <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                  </path>
-                </svg>
-                <div>
-                  <p class="font-semibold">Téléphone</p>
-                  <a href="tel:+33618901402" class="text-white hover:text-purple-200 transition">06 18 90 14
-                    02</a>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                  </path>
-                </svg>
-                <div>
-                  <p class="font-semibold">Email</p>
-                  <a href="mailto:kingrahman98@hotmail.com"
-                    class="text-white hover:text-purple-200 transition break-all">kingrahman98@hotmail.com</a>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                  </path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                <div>
-                  <p class="font-semibold">Localisation</p>
-                  <p class="text-purple-100">Île-de-France, France</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                  </path>
-                </svg>
-                <div>
-                  <p class="font-semibold">Disponibilité</p>
-                  <p class="text-purple-100">Dès que possible</p>
-                  <p class="text-sm text-purple-100">Rythme : 3 semaines / 1 semaine</p>
-                </div>
-              </div>
+              <div class="flex items-start"><svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg><div><p class="font-semibold">Téléphone</p><a href="tel:+33618901402" class="text-white hover:text-purple-200 transition">06 18 90 14 02</a></div></div>
+              <div class="flex items-start"><svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg><div><p class="font-semibold">Email</p><a href="/cdn-cgi/l/email-protection#640f0d0a0316050c09050a5d5c240c0b1009050d084a070b09" class="text-white hover:text-purple-200 transition break-all"><span class="__cf_email__" data-cfemail="ddb6b4b3baafbcb5b0bcb3e4e59db5b2a9b0bcb4b1f3beb2b0">[email&#160;protected]</span></a></div></div>
+              <div class="flex items-start"><svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg><div><p class="font-semibold">Localisation</p><p class="text-purple-100">Île-de-France, France</p></div></div>
+              <div class="flex items-start"><svg class="w-6 h-6 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg><div><p class="font-semibold">Disponibilité</p><p class="text-purple-100">Dès que possible</p><p class="text-sm text-purple-100">Rythme : 3 semaines / 1 semaine</p></div></div>
             </div>
           </div>
         </div>
-
-        <!-- CTA Card -->
         <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl flex flex-col justify-center">
           <h3 class="text-2xl font-bold mb-4">Intéressé par mon profil ?</h3>
-          <p class="mb-6 text-purple-100">
-            N'hésitez pas à me contacter pour discuter de votre projet ou d'opportunités d'alternance.
-          </p>
+          <p class="mb-6 text-purple-100">N'hésitez pas à me contacter pour discuter de votre projet ou d'opportunités d'alternance.</p>
           <div class="space-y-4">
-            <a href="mailto:kingrahman98@hotmail.com"
-              class="block w-full px-6 py-3 bg-white text-primary rounded-lg hover:bg-purple-50 transition font-semibold text-center">
-              Envoyer un email
-            </a>
+            <a href="/cdn-cgi/l/email-protection#3d5654535a4f5c55505c5304057d555249505c5451135e5250" class="block w-full px-6 py-3 bg-white text-primary rounded-lg hover:bg-purple-50 transition font-semibold text-center">Envoyer un email</a>
             <div class="flex gap-4 justify-center">
-              <a href="https://linkedin.com/in/moctarr" target="_blank"
-                class="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg transition flex items-center"
-                aria-label="LinkedIn">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-              </a>
-              <a href="https://github.com/diiblo" target="_blank"
-                class="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg transition flex items-center"
-                aria-label="GitHub">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-              </a>
+              <a href="https://linkedin.com/in/moctarr" target="_blank" class="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg transition flex items-center" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+              <a href="https://github.com/diiblo" target="_blank" class="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-lg transition flex items-center" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
             </div>
           </div>
         </div>
@@ -971,7 +590,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-dark text-white py-8">
     <div class="container mx-auto px-6 text-center">
       <p class="mb-2">&copy; 2026 King Rahman Moctarr Basiru. Tous droits réservés.</p>
@@ -979,74 +597,23 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when clicking a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    // Projects filtering
     function filterProjects(category) {
       const projects = document.querySelectorAll('.project-card');
       const btnDev = document.getElementById('btn-dev');
       const btnData = document.getElementById('btn-data');
       const btnPm = document.getElementById('btn-pm');
-
-      // Reset all buttons
       [btnDev, btnData, btnPm].forEach(btn => {
         btn.classList.remove('bg-primary', 'text-white', 'shadow-md');
         btn.classList.add('bg-white', 'text-primary', 'border-2', 'border-primary');
       });
-
-      // Activate selected button
       const activeBtn = category === 'dev' ? btnDev : category === 'data' ? btnData : btnPm;
       activeBtn.classList.remove('bg-white', 'text-primary', 'border-2', 'border-primary');
       activeBtn.classList.add('bg-primary', 'text-white', 'shadow-md');
-
-      // Filter projects with animation
       projects.forEach((project, index) => {
-        project.classList.remove('active', 'project-fade-in');
-
-        setTimeout(() => {
-          if (project.dataset.category === category) {
-            project.classList.add('active');
-            setTimeout(() => {
-              project.classList.add('project-fade-in');
-            }, index * 50);
-          }
-        }, 10);
-      });
-    }
-
-    // Fade-in animation on scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('section > div > *').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
-</body>
-
-</html>
+        project.classList.remove('active', 'projec
